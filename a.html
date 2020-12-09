@@ -1,0 +1,100 @@
+<!--진짜 믿는 게 아니라 실습용입니다!-->
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset= utf-8>
+<style>
+	body{
+	backgroung-color: lightblue:
+	}
+	h2{
+	    font-family: "Times New Roman", Georgia, Serif;
+		text-align: center;
+		text-shadow: 2px 1px #3399CC; 
+	}
+</style>
+</head>
+<body>
+<script>
+// 쿠키 생성 함수
+function setCookie(cName, cValue, cDay){
+var expire = new Date();
+expire.setDate(expire.getDate() + cDay);
+cookies = cName + '=' + escape(cValue) + '; path=/ '; // 한글 깨짐을 막기위해 escape(cValue)를 합니다.
+if(typeof cDay != 'undefined') cookies += ';expires=' + expire.toGMTString() + ';';
+document.cookie = cookies;
+}
+
+// 쿠키 가져오기 함수
+function getCookie(cName) {
+cName = cName + '=';
+var cookieData = document.cookie;
+var start = cookieData.indexOf(cName);
+var cValue = '';
+if(start != -1){
+start += cName.length;
+var end = cookieData.indexOf(';', start);
+if(end == -1)end = cookieData.length;
+cValue = cookieData.substring(start, end);
+}
+return unescape(cValue);
+}
+//출처: https://webfoxrain.tistory.com/2
+var ch = getCookie("ck1");
+if(ch!="정만희"){
+var input = prompt("please input password");
+if(input !="jungmanhee"){
+  alert("You don't have authority.");
+  if(navigator.appVersion.indexOf("MSIE 6.0")>=0) { 
+     parent.window.close(); 
+  }
+  else { 
+	  parent.window.open('b.html','_self').close(); 
+       }
+}
+else{
+    setCookie("ck1","정만희","1");
+    alert("This site is a joke, practice site. I don't really believe it.");
+}
+//로고 출처:https://hatchful.shopify.com/
+}
+</script>
+<title>jungmanhee offical homepage</title>
+<a href = "https://webstudy1.github.io/jtwomain/jtwo.html">-<goto jtwo main site</a>
+<img src="SharedScreenshot.jpg" width = "100" height = "100">
+<a href = "SharedScreenshot.jpg" download = "junmanheelogo.jpg">jungmanheelogo download</a>
+<br>
+<br>
+<h2><strong>jungmanhee offical homepage</strong></h2>
+<br>
+<script>
+function search(){
+	var naver = "https://www.google.com/search?q=";
+	var input = prompt("Please enter a search term");
+	var link_goa  = naver + input;
+	location.href= link_goa;
+}
+var d = new Date();
+document.write("current time:");
+document.write(d);
+</script>
+<br>
+<h3>I believe jungmanhee! monkey chatter</h3>
+<br>
+<h3>Head master: *** *** back, *** ** ra, *** *** young, *** *** do   god:jungmanhee Site manager: *** *** lee  number of jungmanhee member: over infinity</h3>
+<h4>shincheonji, minicheonji, HyunwooJeil is cult!</h4>
+<h2>
+<button type = "button" onclick="search();">google search</button>
+<br>
+<a href = "song.html">->song</a>
+<br>
+<a href = "notice.html">->notice</a>
+<br>
+<a href = "howp.html">->how to prey</a>
+<br>
+<a href = "myth.html">->myth</a>
+<br></h2>
+<h4>code source:</h4>
+<h5>cookie: https://webfoxrain.tistory.com/2</h5>
+</body>
+</html>
